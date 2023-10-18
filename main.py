@@ -63,7 +63,8 @@ def search(key: str):
         f = open("index.json", "r")
 
     data = json.loads(f.read())
-
+    f.close()
+    
     if key in data:
         print(f"xkcd comics with the keyword \"{key}\":")
         for num in data[key]:
